@@ -20,7 +20,7 @@ class ViewModel:ViewModelType {
     let input:Input
     let output: Output
     
-    init(input:Input,output:Output) {
+    init(input:Input,dependency:String) {
         self.input = input
         let rxResult = input.text.asObservable()
         self.output = Output(result: rxResult)
